@@ -8,6 +8,7 @@
 //E J E R C I C I O                        TABLA DEL 7
 // let tabla = 7;
 
+
 // while(tabla <= 70){
 //     console.log(tabla);
 //     tabla = tabla + 7;
