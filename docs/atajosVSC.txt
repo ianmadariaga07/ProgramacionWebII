@@ -1,5 +1,4 @@
-A T A J O S   L I N U X   V I S U A L  S T U D I O   C O D E 
-COINCIDENCIAS:
+A T A J O S   L I N U X   V I S U A L  S T U D I O   C O D E COINCIDENCIAS:
 ctrl+d
 ctrl+shift+l
 
