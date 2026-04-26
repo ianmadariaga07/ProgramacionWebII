@@ -38,11 +38,11 @@ function mostrarUsuarios() {
         fila.innerHTML = `
             <td>${user.id}</td>
             <td contenteditable onblur="editarCampo(${index}, 'nombre',this.textContent)">${user.nombre}</td>
-            <td contenteditable onblur="editarCampo(${index}, '',this.textContent)">${user.email}</td>
+            <td contenteditable onblur="editarCampo(${index}, 'correo',this.textContent)">${user.email}</td>
             <td>
-                <button onclick="eliminarUsuario(${index})">Eliminar</button>
+                <button onclick="eliminarUsuario(${user.id})">Eliminar</button>
             </td>
-        `;
+        `
         tabla.appendChild(fila);    
     });
 }
@@ -51,8 +51,9 @@ function editarCampo(index, campo, valor) {
     usuario[index][campo] = valor.trim();
 }
 
-function eliminarUsuario(index) {
-    if(confirm('¿Estás seguro de que quieres eliminar este usuario?')){
+function eliminarUsuario(id) {
+    const index = usuario.findIndex(user => user.id === id);
+    if (index !== -1 && confirm('¿Estás seguro de que quieres eliminar este usuario?')) {
         usuario.splice(index, 1);
         mostrarUsuarios();
     }
